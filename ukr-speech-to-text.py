@@ -8,8 +8,8 @@ import azure.cognitiveservices.speech as speechsdk
 def speech_recognize_continuous_from_file(filename):
     """performs continuous speech recognition with input from an audio file"""
     speech_config = speechsdk.SpeechConfig(
-        subscription=os.environ.get("SPEECH_KEY"),
-        region=os.environ.get("SPEECH_REGION"),
+        subscription=os.environ.get("TRANSLATOR_TEXT_RESOURCE_KEY"),
+        region=os.environ.get("TRANSLATOR_TEXT_REGION"),
     )
     speech_config.speech_recognition_language = "uk-UA"
     audio_config = speechsdk.audio.AudioConfig(filename=filename)
